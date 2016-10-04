@@ -1,0 +1,38 @@
+{
+	"id": "589d8759-3162-424f-bd23-b3f5adee7e8e",
+	"actor": {
+		"objectType": "Agent",
+		"mbox": "",
+		"name": "student"
+	},
+	"verb": {
+		"id": "http://adlnet.gov/expapi/verbs/launched",
+		"display": {
+			"en-US": "launched"
+		}
+	},
+	"object": {
+		"id": "http://adlnet.gov/expapi/activities/assessment",
+		"objectType": "Activity",
+		"definition": {
+			"name": {
+				"name": "assessment"
+			},
+			"description": {
+				"en-US": "assessment"
+			},
+			"type": "http://adlnet.gov/expapi/activities/assessment"
+		}
+	},
+	"context": {
+		"extensions": {
+			"http://atitesting.ascend.com/SessionKey": "02574503-2e40-45fb-8951-e20ed4babb87",
+			"http://atitesting.ascend.com/ApplicationID": "1",
+			"http://atitesting.ascend.com/UserID": "3544913",
+			"http://atitesting.ascend.com/AssessmentID": "143533",
+			"http://atitesting.ascend.com/AssessmentBatchID": "8608994"
+		}
+	},
+	"timestamp": "2016-06-15T21:58:40.8840998Z",
+	"stored": "2016-06-15T21:58:44Z"
+}

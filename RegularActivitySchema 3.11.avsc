@@ -1,0 +1,1600 @@
+{
+  "type": "record",
+  "name": "studentActivitySchemaDefault",
+  "namespace": "com.ascend.analytics.tincan",
+  "fields": [
+    {
+      "name": "id",
+      "type": "string"
+    },
+    {
+      "name": "actor",
+      "type": {
+        "type": "record",
+        "name": "actor",
+        "fields": [
+          {
+            "name": "objectType",
+            "type": [
+              "null",
+              {
+                "type": "enum",
+                "name": "actorobjType",
+                "symbols": [
+                  "Agent",
+                  "Group"
+                ]
+              }
+			  ],
+			  "default":null
+          },
+          {
+            "name": "name",
+            "type": [
+                        "null",
+                        "string"
+                    ],
+					"default":null
+          },
+          {
+            "name": "member",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": {
+                  "type": "record",
+                  "name": "actorarrayofAgentObjects",
+                  "fields": [
+                    {
+                      "name": "objectType",
+                      "type": [
+                        "null",
+                        {
+                          "type": "enum",
+                          "name": "actoractorObjectType",
+                          "symbols": [
+                            "Agent"
+                          ]
+                        }
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "name",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox_sha1sum",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "openid",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "account",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "actorAccount",
+                          "fields": [
+                            {
+                              "name": "homePage",
+                              "type": "string"
+                            },
+                            {
+                              "name": "name",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ],
+					  "default":null
+                    }
+                  ]
+                }
+              }
+            ] ,
+			"default":null
+          },
+          {
+            "name": "mbox",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "mbox_sha1sum",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "openid",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "account",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "account",
+                "fields": [
+                  {
+                    "name": "homePage",
+                    "type": "string"
+                  },
+                  {
+                    "name": "name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ],
+			"default":null
+          }
+        ]
+      }
+    },
+    {
+      "name": "verb",
+      "type": {
+        "type": "record",
+        "name": "verb",
+        "fields": [
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "display",
+            "type": [
+              "null",
+              {
+                "type": "map",
+                "values": "string"
+              }
+            ],
+			"default":null
+          }
+        ]
+      }
+    },
+    {
+      "name": "object",
+      "type": {
+        "type": "record",
+        "name": "object",
+        "fields": [
+          {
+            "name": "objectType",
+            "type": [
+              "null",
+              {
+                "type": "enum",
+                "name": "objtyp",
+                "symbols": [
+                  "Activity",
+                  "Agent",
+                  "Group",
+                  "SubStatement",
+                  "StatementRef"
+                ]
+              }
+            ],
+			"default":null
+          },
+          {
+            "name": "id",
+            "type": "string"
+          },
+          {
+            "name": "definition",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "definition",
+                "fields": [
+                  {
+                    "name": "name",
+                    "type": [
+                      "null",
+                      {
+                        "type": "map",
+                        "values": "string"
+                      }
+                    ],
+					"default":null
+                  },
+                  {
+                    "name": "description",
+                    "type": [
+                      "null",
+                      {
+                        "type": "map",
+                        "values": "string"
+                      }
+                    ],
+					"default":null
+                  },
+                  {
+                    "name": "type",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+					"default":null
+                  },
+                  {
+                    "name": "moreInfo",
+                    "type": [
+                      "null",
+                      "string"
+                    ],
+					"default":null
+                  },
+                  {
+                    "name": "extensions",
+                    "type": [
+                      "null",
+                      {
+                        "type": "map",
+                        "values": "string"
+                      }
+                    ],
+					"default":null
+                  }
+                ]
+              }
+            ],
+			"default":null
+          },
+          {
+            "name": "name",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "member",
+            "type": [
+              "null",
+              {
+                "type": "array",
+                "items": {
+                  "type": "record",
+                  "name": "arrofAgentObjects",
+                  "fields": [
+                    {
+                      "name": "objectType",
+                      "type": [
+                        "null",
+                        {
+                          "type": "enum",
+                          "name": "AgentObjectType",
+                          "symbols": [
+                            "Agent"
+                          ]
+                        }
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "name",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox_sha1sum",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "openid",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "account",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "AgentAccount",
+                          "fields": [
+                            {
+                              "name": "homePage",
+                              "type": "string"
+                            },
+                            {
+                              "name": "name",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ],
+					  "default":null
+                    }
+                  ]
+                }
+              }
+            ],
+			"default":null
+          },
+          {
+            "name": "mbox",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "mbox_sha1sum",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "openid",
+            "type": [
+              "null",
+              "string"
+            ],
+			"default":null
+          },
+          {
+            "name": "account",
+            "type": [
+              "null",
+              {
+                "type": "record",
+                "name": "Groupaccount",
+                "fields": [
+                  {
+                    "name": "homePage",
+                    "type": "string"
+                  },
+                  {
+                    "name": "name",
+                    "type": "string"
+                  }
+                ]
+              }
+            ],
+			"default":null
+          },
+          {
+            "name": "SubStatement",
+            "type": [
+              "null",
+              "studentActivitySchemaDefault"
+            ],
+			"default":null
+          }
+        ]
+      }
+    },
+    {
+      "name": "context",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "context",
+          "fields": [
+            {
+              "name": "registration",
+              "type": [
+                "null",
+                "string"
+              ],
+			  "default":null
+            },
+            {
+              "name": "team",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "team",
+                  "fields": [
+                    {
+                      "name": "objectType",
+                      "type": [
+                        "null",
+                        {
+                          "type": "enum",
+                          "name": "objecttype",
+                          "symbols": [
+                            "Group"
+                          ]
+                        }
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "name",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "member",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "arrayofAgentobjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "objtype",
+                                    "symbols": [
+                                      "Agent"
+                                    ]
+                                  }
+                                ],
+								"default":null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+								"default":null
+                              },
+                              {
+                                "name": "mbox",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+								"default":null
+                              },
+                              {
+                                "name": "mbox_sha1sum",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+								"default":null
+                              },
+                              {
+                                "name": "openid",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ],
+								"default":null
+                              },
+                              {
+                                "name": "account",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "acount",
+                                    "fields": [
+                                      {
+                                        "name": "homePage",
+                                        "type": "string"
+                                      },
+                                      {
+                                        "name": "name",
+                                        "type": "string"
+                                      }
+                                    ]
+                                  }
+                                ],
+								"default":null
+                              }
+                            ]
+                          }
+                        }
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "mbox_sha1sum",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "openid",
+                      "type": [
+                        "null",
+                        "string"
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "account",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "teamgroupaccount",
+                          "fields": [
+                            {
+                              "name": "homePage",
+                              "type": "string"
+                            },
+                            {
+                              "name": "name",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ]
+					  ,
+					  "default":null
+                    }
+                  ]
+                }
+              ]
+			  ,
+					  "default":null
+            },
+            {
+              "name": "instructor",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "instructor",
+                  "fields": [
+                    {
+                      "name": "objectType",
+                      "type": [
+                        "null",
+                        {
+                          "type": "enum",
+                          "name": "insobjectType",
+                          "symbols": [
+                            "Agent",
+                            "Group"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "name": "name",
+                      "type": [
+                        "null",
+                        "string"
+                      ]
+                    },
+                    {
+                      "name": "member",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "insarrayofAgentObjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "insObjectType",
+                                    "symbols": [
+                                      "Agent"
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "name",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "mbox",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "mbox_sha1sum",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "openid",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "account",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "insAccount",
+                                    "fields": [
+                                      {
+                                        "name": "homePage",
+                                        "type": "string"
+                                      },
+                                      {
+                                        "name": "name",
+                                        "type": "string"
+                                      }
+                                    ]
+                                  }
+                                ],
+					            "default":null
+                              }
+                            ]
+                          }
+                        }
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "mbox",
+                      "type": [
+                        "null",
+                        "string"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "mbox_sha1sum",
+                      "type": [
+                        "null",
+                        "string"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "openid",
+                      "type": [
+                        "null",
+                        "string"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "account",
+                      "type": [
+                        "null",
+                        {
+                          "type": "record",
+                          "name": "insaccount",
+                          "fields": [
+                            {
+                              "name": "homePage",
+                              "type": "string"
+                            },
+                            {
+                              "name": "name",
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      ],
+					  "default":null
+					}
+                  ]
+                }
+              ],
+			  "default":null
+            },
+            {
+              "name": "contextactivities",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "contextactivities",
+                  "fields": [
+                    {
+                      "name": "parent",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "parentarrayofActivityObjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "parentObjectType",
+                                    "symbols": [
+                                      "Activity"
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ]
+                              },
+                              {
+                                "name": "definition",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "parentdefinition",
+                                    "fields": [
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "description",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "type",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "moreInfo",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "extensions",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      }
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              }
+                            ]
+                          }
+                        }
+                      ],
+					  "default":null
+                    },
+                    {
+                      "name": "grouping",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "groupingarrayofActivityObjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "groupingObjectType",
+                                    "symbols": [
+                                      "Activity"
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "definition",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "groupingdefinition",
+                                    "fields": [
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                      "default":null
+                                      },
+                                      {
+                                        "name": "description",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+                                        "default":null
+                                      },
+                                      {
+                                        "name": "type",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "moreInfo",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "extensions",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      }
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              }
+                            ]
+                          }
+                        }
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "category",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "categoryarrayofActivityObjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "categoryObjectType",
+                                    "symbols": [
+                                      "Activity"
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "definition",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "categorydefinition",
+                                    "fields": [
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "description",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ],
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "type",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "moreInfo",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "extensions",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      }
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              }
+                            ]
+                          }
+                        }
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "other",
+                      "type": [
+                        "null",
+                        {
+                          "type": "array",
+                          "items": {
+                            "type": "record",
+                            "name": "otherarrayofActivityObjects",
+                            "fields": [
+                              {
+                                "name": "objectType",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "enum",
+                                    "name": "otherObjectType",
+                                    "symbols": [
+                                      "Activity"
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "id",
+                                "type": [
+                                  "null",
+                                  "string"
+                                ] ,
+					            "default":null
+                              },
+                              {
+                                "name": "definition",
+                                "type": [
+                                  "null",
+                                  {
+                                    "type": "record",
+                                    "name": "otherdefinition",
+                                    "fields": [
+                                      {
+                                        "name": "name",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "description",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "type",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "moreInfo",
+                                        "type": [
+                                          "null",
+                                          "string"
+                                        ] ,
+					                    "default":null
+                                      },
+                                      {
+                                        "name": "extensions",
+                                        "type": [
+                                          "null",
+                                          {
+                                            "type": "map",
+                                            "values": "string"
+                                          }
+                                        ] ,
+					                    "default":null
+                                      }
+                                    ]
+                                  }
+                                ] ,
+					            "default":null
+                              }
+                            ]
+                          }
+                        }
+                      ] ,
+					  "default":null
+                    }
+                  ]
+                }
+              ] ,
+			  "default":null
+            },
+            {
+              "name": "revision",
+              "type": [
+                "null",
+                "string"
+              ],
+			  "default":null
+            },
+            {
+              "name": "platform",
+              "type": [
+                "null",
+                "string"
+              ] ,
+			  "default":null
+            },
+            {
+              "name": "language",
+              "type": [
+                "null",
+                "string"
+              ] ,
+		      "default":null
+            },
+            {
+              "name": "statement",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "statement",
+                  "fields": [
+                    {
+                      "name": "objectType",
+                      "type": {
+                        "type": "enum",
+                        "name": "statementobjType",
+                        "symbols": [
+                          "StatementRef"
+                        ]
+                      }
+                    },
+                    {
+                      "name": "id",
+                      "type": "string"
+                    }
+                  ]
+                }
+              ],
+			  "default":null
+            },
+            {
+										"name": "extensions",
+                                        "type": [
+                                        "null",
+                                        {
+                                          "type": "map",
+                                          "values": "string"
+                                        }
+                                        ],
+					                    "default":null
+            }
+          ]
+        }
+      ] ,
+	  "default":null
+    },
+    {
+      "name": "result",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "result",
+          "fields": [
+            {
+              "name": "score",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "score",
+                  "fields": [
+                    {
+                      "name": "scaled",
+                      "type": [
+                        "null",
+                        "float"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "raw",
+                      "type": [
+                        "null",
+                        "float"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "min",
+                      "type": [
+                        "null",
+                        "float"
+                      ] ,
+					  "default":null
+                    },
+                    {
+                      "name": "max",
+                      "type": [
+                        "null",
+                        "float"
+                      ] ,
+					  "default":null
+                    }
+                  ]
+                }
+              ],
+			  "default":null
+            },
+            {
+              "name": "success",
+              "type": [
+                "null",
+                "boolean"
+              ] ,
+			  "default":null
+            },
+            {
+              "name": "completion",
+              "type": [
+                "null",
+                "boolean"
+              ],
+			  "default":null
+            },
+            {
+              "name": "response",
+              "type": [
+                "null",
+                "string"
+              ],
+			  "default":null
+            },
+            {
+              "name": "duration",
+              "type": [
+                "null",
+                "string"
+              ],
+			  "default":null
+            },
+            {
+              "name": "extensions",
+              "type": [
+                "null",
+                {
+                  "type": "map",
+                  "values": "string"
+                }
+              ] ,
+			  "default":null
+            }
+          ]
+        }
+      ],
+	  "default":null
+    },
+    {
+      "name": "timestamp",
+      "type": [
+        "null",
+        "string"
+      ] ,
+	  "default":null
+    },
+    {
+      "name": "stored",
+      "type": [
+        "null",
+        "string"
+      ] ,
+	  "default":null
+    },
+    {
+      "name": "version",
+      "type": [
+        "null",
+        "string"
+      ] ,
+	  "default":null
+    },
+    {
+      "name": "authority",
+      "type": [
+        "null",
+        {
+          "type": "record",
+          "name": "authority",
+          "fields": [
+            {
+              "name": "objectType",
+              "type": [
+                "null",
+                {
+                  "type": "enum",
+                  "name": "ObjectType",
+                  "symbols": [
+                    "Agent",
+                    "Group"
+                  ]
+                }
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "name",
+              "type": [
+                "null",
+                "string"
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "member",
+              "type": [
+                "null",
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "record",
+                    "name": "arrayofAgentObjects",
+                    "fields": [
+                      {
+                        "name": "objectType",
+                        "type": [
+                          "null",
+                          {
+                            "type": "enum",
+                            "name": "Objecttype",
+                            "symbols": [
+                              "Agent"
+                            ]
+                          }
+                        ] ,
+					  "default":null
+                      },
+                      {
+                        "name": "name",
+                        "type": [
+                          "null",
+                          "string"
+                        ] ,
+					  "default":null
+                      },
+                      {
+                        "name": "mbox",
+                        "type": [
+                          "null",
+                          "string"
+                        ] ,
+					  "default":null
+                      },
+                      {
+                        "name": "mbox_sha1sum",
+                        "type": [
+                          "null",
+                          "string"
+                        ] ,
+					  "default":null
+                      },
+                      {
+                        "name": "openid",
+                        "type": [
+                          "null",
+                          "string"
+                        ] ,
+					  "default":null
+                      },
+                      {
+                        "name": "account",
+                        "type": [
+                          "null",
+                          {
+                            "type": "record",
+                            "name": "Account",
+                            "fields": [
+                              {
+                                "name": "homePage",
+                                "type": "string"
+                              },
+                              {
+                                "name": "name",
+                                "type": "string"
+                              }
+                            ]
+                          }
+                        ] ,
+					  "default":null
+                      }
+                    ]
+                  }
+                }
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "mbox",
+              "type": [
+                "null",
+                "string"
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "mbox_sha1sum",
+              "type": [
+                "null",
+                "string"
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "openid",
+              "type": [
+                "null",
+                "string"
+              ] ,
+					  "default":null
+            },
+            {
+              "name": "account",
+              "type": [
+                "null",
+                {
+                  "type": "record",
+                  "name": "Acount",
+                  "fields": [
+                    {
+                      "name": "homePage",
+                      "type": "string"
+                    },
+                    {
+                      "name": "name",
+                      "type": "string"
+                    }
+                  ]
+                }
+              ] ,
+					  "default":null
+            }
+          ]
+        }
+      ] ,
+	  "default":null
+    },
+    {
+      "name": "attachments",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "record",
+            "name": "attachments",
+            "fields": [
+              {
+                "name": "usageType",
+                "type": "string"
+              },
+              {
+                "name": "display",
+                "type": {
+                  "type": "map",
+                  "values": "string"
+                }
+              },
+              {
+                "name": "description",
+                "type": [
+                  "null",
+                  {
+                    "type": "map",
+                    "values": "string"
+                  }
+                ] ,
+					  "default":null
+              },
+              {
+                "name": "contentType",
+                "type": "string"
+              },
+              {
+                "name": "length",
+                "type": "int"
+              },
+              {
+                "name": "sha2",
+                "type": "string"
+              },
+              {
+                "name": "fileURL",
+                "type": [
+                  "null",
+                  "string"
+                ] ,
+					  "default":null
+              }
+            ]
+          }
+        }
+      ],
+	  "default":null
+    }
+  ]
+}

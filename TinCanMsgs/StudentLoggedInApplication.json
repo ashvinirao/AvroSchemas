@@ -1,0 +1,34 @@
+{
+	"id": "327be71f-9ab6-4ecf-a310-79bb637a0199",
+	"actor": {
+		"objectType": "Agent",
+		"mbox": "",
+		"name": "student"
+	},
+	"verb": {
+		"id": "http://adlnet.gov/expapi/verbs/logged-in",
+		"display": {
+			"en-US": "logged-in"
+		}
+	},
+	"object": {
+		"id": "http://adlnet.gov/expapi/activities/application",
+		"objectType": "Activity",
+		"definition": {
+			"name": {
+				"name": "application"
+			},
+			"description": {
+				"en-US": "application"
+			},
+			"type": "http://adlnet.gov/expapi/activities/application"
+		}
+	},
+	"context": {
+		"extensions": {
+			"http://atitesting.ascend.com/ApplicationName": "StudentPortal"
+		}
+	},
+	"timestamp": "2016-06-15T21:57:18.7299951Z",
+	"stored": "2016-06-15T21:57:22Z"
+}
